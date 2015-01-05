@@ -26,7 +26,7 @@ Route::delete('api/tasks/{id}', array('as' => 'delete_task', 'uses' => 'TasksCon
 Route::get('/account', array('as' => 'account', 'uses' => 'AccountController@index'));
 Route::get('/account/login', array('as' => 'account_login', 'uses' => 'AccountController@login'));
 Route::get('/account/logout', array('as' => 'account_logout', 'uses' => 'AccountController@logout'));
-Route::get('/account/register', array('as' => 'new_account', 'uses' => 'AccountController@login'));
+Route::get('/account/register', array('as' => 'new_account', 'uses' => 'AccountController@create'));
 Route::get('/account/profile', array('as' => 'get_account', 'uses' => 'AccountController@profile'));
 Route::get('/account/change-password', array('as' => 'change_password', 'uses' => 'AccountController@password'));
 
