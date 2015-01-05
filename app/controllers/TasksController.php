@@ -22,7 +22,7 @@ class TasksController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 	/**
@@ -33,7 +33,17 @@ class TasksController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+
+    if(Task::validate(Input::all())){
+    	return Response::json(array(
+    		'message' => 'Task has been created!'
+    		), 200);
+    }else{
+    	return Response::json(array(
+    		'error_code' => 'Some problem happened, verify the API documentation.'
+    		), 400);
+    }
+
 	}
 
 	/**
