@@ -13,7 +13,7 @@ class AddTaskStatus extends Migration {
 	public function up()
 	{
 		Schema::table('tasks', function($table){
-			$table->boolean('status');
+			$table->boolean('status')->nullable();
 		});
 	}
 
